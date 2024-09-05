@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Holiday - Orquesta de Versiones 50s, 60s y 70s</title>
+    <link rel="stylesheet" href="css/styles.css">
+    
+</head>
+<body>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#inicio">
+                <i class="fas fa-home"></i><!--!Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg>
+                <span>Inicio</span>
+            </a></li>
+            <li><a href="#videos">
+                <i class="fas fa-video"></i>
+                <span>Videos</span></a></li>
+            <li><a href="#repertorio">
+                <i class="fas fa-music"></i>
+                <span>Repertorio</span></a></li>
+            <li><a href="#contacto">
+                <i class="fas fa-envelope"></i>
+                <span>Contacto</span></a></li>
+        </ul>
+    </nav>
+
+    <section id="inicio">
+        <div class="hero-content">
+            <div class="logo-container vinyl-record">
+                <img src="img/logo.png" alt="Logo New Holiday" class="logo animate-fade-in">
+            </div>
+            <h1 class="animate-fade-in">New Holiday</h1>
+            <p class="animate-fade-in">Orquesta de versiones de los 50s, 60s y 70s</p>
+            <a href="#videos" class="cta-button animate-fade-in">Ver Videos</a>
+        </div>
+    </section>
+
+    <section id="videos">
+        <!-- <h2>Videos</h2> Elimina o comenta esta línea -->
+        <div class="video-container">
+            <div id="video-player">
+                <iframe width="100%" height="315" 
+                        src="" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+            <div class="carousel-container">
+                <button id="prev-btn" class="nav-btn"><i class="fas fa-chevron-left"></i></button>
+                <div id="video-carousel" class="carousel">
+                    <!-- Los thumbnails se cargarán aquí dinámicamente -->
+                </div>
+                <button id="next-btn" class="nav-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comentamos la sección de imágenes -->
+    <!--
+    <section id="imagenes">
+        <h2>Imágenes</h2>
+        <div id="image-viewer">
+            <img src="imagen_default.jpg" alt="Imagen por defecto" style="max-width: 100%;">
+        </div>
+        <div class="grid">
+            <img src="thumbnail1.jpg" alt="Miniatura 1" data-full="imagen1.jpg">
+            <img src="thumbnail2.jpg" alt="Miniatura 2" data-full="imagen2.jpg">
+            <img src="thumbnail3.jpg" alt="Miniatura 3" data-full="imagen3.jpg">
+        </div>
+    </section>
+    -->
+
+    <section id="repertorio">
+        <h2>Repertorio</h2>
+        <div id="lista-repertorio" class="grid-repertorio">
+            <!-- Aquí se cargarán dinámicamente las canciones -->
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <div class="contacto-container">
+            <div class="contacto-info">
+                <h3>Contáctanos</h3>
+                <p><i class="fas fa-envelope"></i> Email: orquestanewholiday@gmail.com</p>
+                <p><i class="fas fa-phone"></i> Teléfono: +34 660 085 227</p>
+                <div class="social-media">
+                    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+                
+            </div>
+            <div class="contacto-container-iframe">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeD3fcshg8crx-ewjRUu0sWUt9-7P3wmtPrcp7AV6ZAAm3aLQ/viewform?embedded=true" 
+                        width="100%" 
+                        height="500" 
+                        frameborder="0" 
+                        marginheight="0" 
+                        marginwidth="0">
+                    Cargando…
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</body>
+</html>
