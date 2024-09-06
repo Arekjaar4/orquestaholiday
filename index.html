@@ -3,9 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Holiday - Orquesta de Versiones 50s, 60s y 70s</title>
+    <title>New Holiday - Música en Vivo para Eventos</title>
     <link rel="stylesheet" href="css/styles.css">
     
+    <!-- Metaetiquetas básicas -->
+    <meta name="description" content="New Holiday - Grupo musical versátil para eventos y celebraciones. Disfruta de la mejor música en vivo con nuestro amplio repertorio.">
+    <meta name="keywords" content="New Holiday, grupo musical, música en vivo, eventos, celebraciones, repertorio variado">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.newholiday.com/">
+    <meta property="og:title" content="New Holiday - Música en Vivo para Eventos">
+    <meta property="og:description" content="Grupo musical versátil para eventos y celebraciones. Disfruta de la mejor música en vivo con nuestro amplio repertorio.">
+    <meta property="og:image" content="https://www.newholiday.com/img/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.newholiday.com/">
+    <meta property="twitter:title" content="New Holiday - Música en Vivo para Eventos">
+    <meta property="twitter:description" content="Grupo musical versátil para eventos y celebraciones. Disfruta de la mejor música en vivo con nuestro amplio repertorio.">
+    <meta property="twitter:image" content="https://www.newholiday.com/img/twitter-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <nav class="main-nav">
@@ -75,39 +99,48 @@
 
     <section id="repertorio">
         <h2>Repertorio</h2>
-        <div id="lista-repertorio" class="grid-repertorio">
-            <!-- Aquí se cargarán dinámicamente las canciones -->
+        <div class="filtros">
+            <button class="filtro-btn activo" data-filtro="todos">Todos</button>
+            <button class="filtro-btn" data-filtro="20s">Años 20</button>
+            <button class="filtro-btn" data-filtro="30s">Años 30</button>
+            <button class="filtro-btn" data-filtro="40s">Años 40</button>
+            <button class="filtro-btn" data-filtro="50s">Años 50</button>
+            <button class="filtro-btn" data-filtro="60s">Años 60</button>
+            <button class="filtro-btn" data-filtro="70s">Años 70</button>
+            <button class="filtro-btn" data-filtro="80s">Años 80</button>
+            <button class="filtro-btn" data-filtro="90s">Años 90</button>
+        </div>
+        <div class="repertorio-container">
+            <div id="lista-repertorio" class="grid-repertorio">
+                <!-- Las canciones se cargarán aquí dinámicamente -->
+            </div>
         </div>
     </section>
 
     <section id="contacto">
-        <h2>Contacto</h2>
         <div class="contacto-container">
-            <div class="contacto-info">
-                <h3>Contáctanos</h3>
-                <p><i class="fas fa-envelope"></i> Email: orquestanewholiday@gmail.com</p>
-                <p><i class="fas fa-phone"></i> Teléfono: +34 660 085 227</p>
-                <div class="social-media">
-                    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+            <h2>Contáctanos</h2>
+            <div class="contacto-content">
+                <div class="contacto-info">
+                    <h3>Información de Contacto</h3>
+                    <p><i class="fas fa-phone"></i> +34 660 085 227</p>
+                    <p><i class="fas fa-envelope"></i> orquestanewholiday@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> La Pobla Llarga (Valencia), España</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
-                
-            </div>
-            <div class="contacto-container-iframe">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeD3fcshg8crx-ewjRUu0sWUt9-7P3wmtPrcp7AV6ZAAm3aLQ/viewform?embedded=true" 
-                        width="100%" 
-                        height="500" 
-                        frameborder="0" 
-                        marginheight="0" 
-                        marginwidth="0">
-                    Cargando…
-                </iframe>
+                <div class="contacto-form">
+                    <h3>Envíanos un mensaje</h3>
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeD3fcshg8crx-ewjRUu0sWUt9-7P3wmtPrcp7AV6ZAAm3aLQ/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+                </div>
             </div>
         </div>
     </section>
 
     <script src="js/main.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </body>
 </html>
