@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     async function loadVideos() {
         try {
-            const response = await fetch('/data/videos.json');
+            const response = await fetch('./data/videos.json');
             const videos = await response.json();
             
             if (videos.length > 0) {
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Función para cargar el repertorio desde el archivo JSON
     async function cargarRepertorio() {
         try {
-            const response = await fetch('/data/repertorio.json');
+            const response = await fetch('./data/repertorio.json');
             repertorio = await response.json();
             mostrarCanciones('todos');
         } catch (error) {
