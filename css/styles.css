@@ -34,17 +34,15 @@ nav a {
 }
 
 section {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 2em;
+    padding: 50px 20px;
     box-sizing: border-box;
 }
 
 #inicio {
-    height: 100vh;
     background-image: url('../img/imagen-de-fondo.png');
     background-size: cover;
     background-position: center;
@@ -146,7 +144,6 @@ section {
     background-color: #1a1a1a;
     padding: 50px 0;
     text-align: center;
-    max-height: 100vh; /* Limita la altura al 100% del viewport */
     overflow: hidden; /* Oculta el desbordamiento */
     display: flex;
     flex-direction: column;
@@ -183,37 +180,29 @@ section {
 
 .grid-repertorio {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 0 20px;
-    overflow-y: auto; /* Añade scroll vertical */
-    max-height: calc(100vh - 200px); /* Ajusta esto según sea necesario */
-    height: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    max-height: 60vh;
+    overflow-y: auto;
 }
 
 .cancion {
     background-color: #333;
     color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.cancion:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(233, 38, 38, 0.3);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
 }
 
 .cancion h3 {
-    margin: 0;
-    font-size: 1.2em;
-    color: #e92626;
+    margin: 0 0 10px 0;
+    font-size: 1.1em;
 }
 
 .cancion p {
-    margin: 5px 0 0;
+    margin: 5px 0;
     font-size: 0.9em;
-    color: #ccc;
 }
 
 /* Estiliza la barra de desplazamiento para navegadores webkit */
@@ -234,17 +223,18 @@ section {
     background: #b91e1e;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .grid-repertorio {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        max-height: 50vh;
+    }
+
+    #video-player iframe {
+        max-height: 50vh;
     }
 }
 
 @media (max-width: 768px) {
-    .grid-repertorio {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
-
     .main-nav ul {
         flex-direction: row !important;
         justify-content: space-around;
@@ -296,7 +286,7 @@ section {
 }
 
 .video-container {
-    max-width: 1200px;
+    max-width: 100%;
     width: 100%;
     margin: 0 auto;
     padding: 0 20px;
@@ -304,6 +294,7 @@ section {
     flex-direction: column;
     flex-grow: 1;
     max-height: calc(100vh - 60px);
+    box-sizing: border-box;
 }
 
 #video-player {
@@ -313,7 +304,7 @@ section {
     overflow: hidden;
     position: relative;
     padding-top: 42.1875%;
-    max-height: 50vh;
+    max-height: 70vh;
     width: 75%;
     margin-left: auto;
     margin-right: auto;
@@ -330,11 +321,12 @@ section {
 
 .carousel-container {
     position: relative;
-    padding: 0 40px;
+    padding: 0 50px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     min-height: 150px;
+    overflow: hidden;
 }
 
 .carousel {
@@ -418,11 +410,11 @@ section {
 }
 
 #prev-btn {
-    left: 0;
+    left: 10px;
 }
 
 #next-btn {
-    right: 0;
+    right: 10px;
 }
 
 .nav-btn:hover {
@@ -590,6 +582,7 @@ section {
     background-color: #1a1a1a;
     padding: 80px 0;
     color: #fff;
+    height: auto;
 }
 
 .contacto-container {
@@ -608,19 +601,13 @@ section {
 
 .contacto-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     gap: 40px;
     width: 80%;
 }
 
-.contacto-info {
-    flex: 1;
-}
-
-.contacto-form {
-    flex: 3; /* Esto dará al formulario tres veces más espacio que a la información de contacto */
-    justify-content: center;
-    align-items: center;
+.contacto-info, .contacto-form {
+    width: 100%;
 }
 
 .contacto-info h3, .contacto-form h3 {
@@ -662,18 +649,141 @@ section {
 
 .contacto-form iframe {
     width: 100%;
-    height: 500px;
+    height: 450px;
     border: none;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(233, 38, 38, 0.1);
 }
 
 @media (max-width: 768px) {
-    .contacto-content {
-        flex-direction: column;
+    section {
+        padding: 30px 15px;
     }
 
-    .contacto-info, .contacto-form {
-        width: 100%;
+    .grid-repertorio {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+    section {
+        min-height: auto;
+        padding: 20px 15px;
+    }
+
+    #video-player iframe {
+        max-height: 50vh;
+    }
+
+    .grid-repertorio {
+        max-height: 40vh;
+    }
+
+    .contacto-form iframe {
+        height: 300px;
+    }
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 20px;
+    box-sizing: border-box;
+}
+
+/* Ajustes específicos para cada sección */
+
+/* Sección de inicio */
+#inicio {
+    background-size: cover;
+    background-position: center;
+}
+
+/* Sección de videos */
+#videos {
+    height: auto;
+    min-height: 100vh;
+}
+
+.video-container {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+#video-player iframe {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+}
+
+/* Sección de repertorio */
+#repertorio {
+    height: auto;
+}
+
+.grid-repertorio {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+/* Sección de contacto */
+#contacto {
+    height: auto;
+}
+
+.contacto-content {
+    flex-direction: column;
+}
+
+.contacto-info, .contacto-form {
+    width: 100%;
+}
+
+.contacto-form iframe {
+    height: 450px;
+}
+
+/* Media queries para ajustes adicionales */
+@media (max-width: 768px) {
+    section {
+        padding: 30px 15px;
+    }
+
+    .grid-repertorio {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+    section {
+        min-height: auto;
+        padding: 20px 15px;
+    }
+
+    #video-player iframe {
+        max-height: 50vh;
+    }
+
+    .grid-repertorio {
+        max-height: 60vh;
+        overflow-y: auto;
+    }
+
+    .contacto-form iframe {
+        height: 300px;
     }
 }
